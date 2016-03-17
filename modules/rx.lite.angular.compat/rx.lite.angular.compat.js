@@ -216,12 +216,12 @@ function thrower(e) {
             $scope.$apply(function () { onNext(data); });
         },
         function (error){
-          ($scope.$$phase || $scope.$root.$$phase) ?
+          ($scope.$$destroyed || $scope.$$phase || $scope.$root.$$phase) ?
             onError(error) :
             $scope.$apply(function () { onError(error); });
         },
         function (){
-          ($scope.$$phase || $scope.$root.$$phase) ?
+          ($scope.$$destroyed || $scope.$$phase || $scope.$root.$$phase) ?
             onComplete() :
             $scope.$apply(function () { onComplete(); });
         });
