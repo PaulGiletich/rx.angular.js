@@ -157,6 +157,6 @@ module.exports = function (grunt) {
     'uglify:lite',
     'uglify:lite-compat',
 
-    'qunit'
+    //'qunit'
   ]);
 };
