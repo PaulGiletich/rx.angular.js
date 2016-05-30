@@ -8,7 +8,6 @@
    * Factory service that exposes the global `Rx` object to the Angular world.
    */
   rxModule.factory('rx', function($window) {
-    $window.Rx || ($window.Rx = Rx);
 
     var CreateObservableFunction = (function(__super__) {
       Rx.internals.inherits(CreateObservableFunction, __super__);
