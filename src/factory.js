@@ -58,5 +58,5 @@
       return new CreateObservableFunction(self, functionName, listener).publish().refCount();
     };
 
-    return $window.Rx;
+    return Rx;
   });
